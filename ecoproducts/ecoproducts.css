@@ -147,7 +147,9 @@ a:hover { color: #7af; }
 .breadcrumb { border-color: #f0f0f0; background: #fdfdfd; }
 
 .bk-header .logo { float: left; } 
-.bk-header .header-menu { float: right; max-width: 1000px; padding: 10px; }
+.bk-header .header-menu { 
+	/* float: right;  */
+	max-width: 1000px; padding: 10px; }
 .bk-header .header-menu:after { }
 
 .nav-header > li > a { border-color: #222; color: #222; padding: 15px; }
@@ -390,7 +392,9 @@ ul.nav-footer li:last-child:after { content: ""; }
 .language-select .lang-list { display: none; }
 .language-select .lang-list.expand-open { display: block; position: absolute; z-index: 111; background: #fff; padding: 5px 20px 5px 10px; border-radius: 5px; box-shadow: 2px 2px 3px #555; }
 .language-select .lang-link { display: block; padding: 3px 0; text-decoration: none; }
-.language-select .lang-link.lang-selected:after { font-family: FA; content: "\f00c"; color: #49a068; #487f5d; padding-left: 5px; }
+.language-select .lang-link.lang-selected:after { font-family: FA; content: "\f00c"; color: #49a068; 
+	/* #487f5d;  */
+	padding-left: 5px; }
 .lang-image { float: left; }
 .lang-no-image { float: left; font-size: 10px; background: #eee; min-width: 16px; color: #333; padding: 0; text-align: center; border: 1px solid #777; }
 .language-select .lang-name { padding-left: 5px; }
@@ -488,7 +492,9 @@ ul.nav-footer li:last-child:after { content: ""; }
 .reply-footer { font-style: italic; font-size: 10px; padding: 10px 10px 10px; }
 
 .bk-product-reviews .image-block { float: right; margin-top: 10px; } 
-.bk-product-reviews .image-block img { max-width: 300px; height; auto; }
+.bk-product-reviews .image-block img { max-width: 300px;
+	 /* height; auto;  */
+	}
 
 .SummaryStatistic img					{margin-top: -2px;}
 .SummaryStatistic .percentage img 	{margin-right: 10px;}
@@ -505,7 +511,9 @@ ul.nav-footer li:last-child:after { content: ""; }
 .ico-empty-star:before { content: "\f006"; }
 .ico-half-star:before { content: "\f123"; }
 .write-review { display: inline-block; margin: 1px 5px 1px 0; white-space: nowrap; border: 1px solid #FF8800; padding: 3px 5px; border-radius: 3px; text-decoration: none; color: #884400; background: linear-gradient(#Ffcc00, #FFbb00, #FFaa00); box-shadow: 1px 1px 1px #888888; cursor: pointer; }
-.write-review:hover { color: #884400; box-shadow: 0 0 0 1px #FF8800, 2px 2px 2px #AA6600; #888888;  }
+.write-review:hover { color: #884400; box-shadow: 0 0 0 1px #FF8800, 2px 2px 2px #AA6600;
+	 /* #888888;  */
+	 }
 .already-reviewed, .already-asked { display: inline-block; margin: 1px 5px 1px 0; border: 1px solid #7777AA; padding: 3px 5px; border-radius: 3px; color: #000044; background: linear-gradient(#eeeeff, #ddddff, #ccccff); box-shadow: 1px 1px 1px #7777AA; }
 .review-error { display: inline-block; margin: 1px 5px 1px 0; border: 1px solid #AA7777; padding: 3px 5px; border-radius: 3px; color: #440000; background: linear-gradient(#ffeeee, #ffdddd, #ffcccc); box-shadow: 1px 1px 1px #AA7777; }
 
@@ -644,7 +652,9 @@ a.bn-shopping { font-weight: bold;}
 a.bn-checkout { font-weight: bold;}
 a.in-cart { text-decoration: none; color: #090; padding: 2px 3px; }
 a.in-cart span { display: none; }
-a.in-cart:before { font: 14px FA; content: "\f218"; text}
+a.in-cart:before { font: 14px FA; content: "\f218";
+	 /* text */
+	}
 .spacer { display: none; }
 a.bn-promo { color: #fff; padding: 5px 20px; display: inline-block; background: #019fe6; box-shadow: 0px 0px 3px 2px #019fe6; border: 2px solid #fff; font-size: 20px; text-decoration: none; } 
 a.bn-promo:hover { color: #ffff99; border-color: #ffff99; }
@@ -1228,8 +1238,12 @@ div.orderPopup {background: #FFFFFF; border: 1px solid #D5D4E9; padding: 2px; di
 .slide-prev:hover, .slide-next:hover { color: #fff; background: rgba(0, 0, 0, 0.1); }
 .slide-prev { left: 0; }
 .slide-next { right: 0; }
-.slide-prev:before { content: "\f053"; "\f0a5"; }
-.slide-next:before { content: "\f054"; "\f0a4"; }
+.slide-prev:before { content: "\f053";
+	 /* "\f0a5";  */
+	}
+.slide-next:before { content: "\f054"; 
+	/* "\f0a4";  */
+}
 /*** end of slideshow styles ***/
 
 .imageSelect { border: 1px solid #ac7f1a; margin: 2px 2px 5px 5px; }
@@ -1257,6 +1271,7 @@ div.youtube-text { display: inline-block; color: #FFF; letter-spacing: 1px; padd
 
 @media (max-width: 1260px) {
 .fm-header, .layout, .fm-footer { width: 1000px; } 
+.fm-header{background-color:#5E9732}
 .lt-double .fm-middle, .lt-right .fm-middle { width: 750px; }
 .lt-single .fm-middle {width: 1000px; }
 .lt-triple .fm-middle {width: 500px; }
