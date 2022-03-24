@@ -530,7 +530,14 @@ input.search-button {
 .header-search-form-wrap {
     position: relative;
 }
-.search-field { position: relative; width: auto; overflow: hidden; height: 38px; border: 1px solid #D1D5DB; padding-left: 40px;
+input.search-field::placeholder {
+font-style: normal; font-family: Arial, Helvetica, sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+color: #6B7280;
+}
+.search-field { position: relative; width: auto; overflow: hidden; height: 38px; border: 1px solid #D1D5DB; padding-left: 40px; padding-top: 6px;
 box-sizing: border-box; box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05); border-radius: 6px; margin: 5px; }
 .search-field input { width: 100%; height: 18px; padding: 5px; border: none; border-top: 1px solid #CDCDCD; border-bottom: 1px solid #CDCDCD;  }
 li.site-search .search-field input { border-left: 1px solid #CDCDCD; border-top-left-radius: 5px; border-bottom-left-radius: 5px; }
@@ -544,7 +551,7 @@ ul.nav-bar li.cart ul { width: 300px; padding: 10px; }
 
 /*** header ***/
 .bk-header { min-height: 75px; position: relative; z-index: 100; }
-.bk-header .logo { 	padding: 10px; } 
+.bk-header .logo { 	padding: 15px 15px 15px 32px; } 
 .bk-header .logo img { border: none;  }
 
 /* header menu */
@@ -555,9 +562,11 @@ ul.nav-bar li.cart ul { width: 300px; padding: 10px; }
 .nav-header { display: block; margin: 0; padding: 0; z-index: 20; }
 
 /* top menu elements */
-.nav-header > li { display: block; float: left; list-style: none; margin: 0px; padding: 0px 0px; white-space: nowrap; }
+.nav-header > li { display: block; float: left; list-style: none; margin: 0px; padding: 11px 0px; white-space: nowrap; }
 .nav-header > li > i { display: none; }
-.nav-header > li > a { min-height: 19px; display: block; font: 14px 'Gotham', Tahoma, Arial; padding: 0px 15px; text-decoration: none; position: relative; text-transform: uppercase; border-right: 1px solid #222; color:white; font-weight: 400; font-style: normal; }
+.nav-header > li > a { min-height: 19px; display: block; font: 14px 'Gotham', Tahoma, Arial; padding: 0px 15px; text-decoration: none; position: relative; 
+     /* border-right: 1px solid #222; */
+     color:white; font-weight: 400; font-style: normal; }
 .nav-header > li:last-child > a { border: none; }
 
 /* popup menu elements */
