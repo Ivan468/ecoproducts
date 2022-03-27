@@ -548,7 +548,7 @@ ul.nav-bar li.cart ul { width: 300px; padding: 10px; }
 .bk-navigation-bar .nav-expand i { float: right; display: block; padding-top: 3px; font-weight: normal; font-style: normal; font-family: FA; }
 .bk-navigation-bar .nav-expand i:after { padding: 0 10px; content:"\f0ae"; }
 /* end navigation bar */
-
+ 
 /*** header ***/
 .bk-header { min-height: 75px; position: relative; z-index: 100; }
 .bk-header .logo { 	padding: 15px 15px 15px 32px; } 
@@ -566,8 +566,8 @@ ul.nav-bar li.cart ul { width: 300px; padding: 10px; }
 .nav-header > li > i { display: none; }
 .nav-header > li > a { min-height: 19px; display: block; font: 14px 'Gotham', Tahoma, Arial; padding: 0px 15px; text-decoration: none; position: relative; 
      /* border-right: 1px solid #222; */
-     color:white; font-weight: 400; font-style: normal; }
-.nav-header > li:last-child > a { border: none; }
+     color:white; font-weight: 400; font-style: normal;}
+.nav-header > li:last-child > a { border: none;}
 
 /* popup menu elements */
 .nav-header li ul { border-width: 3px 1px 1px; border-style: solid; display: none; margin: 5px 0px; padding: 0px; position: absolute; width: 200px; z-index: 101; }
