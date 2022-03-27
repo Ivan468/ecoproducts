@@ -529,7 +529,7 @@ input.search-button {
 }
 .header-search-form-wrap {
     position: absolute;
-    left: 656px;
+    right: 263px;
     top: 10px; max-width:  320px; height: 38px;
     width: 100%;
 }
