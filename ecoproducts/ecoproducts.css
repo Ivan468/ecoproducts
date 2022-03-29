@@ -331,7 +331,7 @@ a:hover { color: #7af; }
 .bk-header .logo { float: left; } 
 .bk-header .header-menu { 
 	float: left; 
-	max-width: 1000px; padding: 12px; }
+	max-width: 1000px; padding: 12px 8px; }
 .bk-header .header-menu:after { }
 
 .nav-header > li > a { border-color: #222; color: #222; padding: 15px; }
