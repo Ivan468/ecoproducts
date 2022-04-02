@@ -1685,18 +1685,23 @@ i.spin:before { content: "\f110"; }
 /* end preview images styles */
 
 
-.learn-sub-menu-item {
+.nav-header .learn-sub-menu-item {
   display: flex; background: white;
+  padding: 0px 0 30px 50px;
 }
 
-.learn-sub-menu-item h3 {
+.nav-header .learn-sub-menu-item h3 {
   width: 100%;
+  margin: 48px 00 0;
 }
+
+.nav-header .learn-sub-menu-item  a {
+  padding: 6px 0px;}
 
 .sustainability-block {
   display: flex;
   flex-wrap: wrap;
-  max-width: 320px;
+  max-width: 200px;
   width: 100%;
 }
 
@@ -1717,5 +1722,7 @@ i.spin:before { content: "\f110"; }
 .learn-sub-menu-item .bg-img-menu {
     width: 390px;
     height: 338px;
-    background-image:url(../images/101-menu-baackground-img.jpg);
+    background: center / contain no-repeat url(../images/101-menu-baackground-img.jpg);
+    flex-shrink: 0;
+    border-radius: 0px 0px 0px 40px;
 }
