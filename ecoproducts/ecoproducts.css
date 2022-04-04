@@ -317,12 +317,31 @@ a:hover { color: #7af; }
 
 .nav-header > li > a { border-color: #222; color: #222; padding: 15px; }
 .nav-header > li a:hover { color: #7af; }
-.nav-header > li.nav-active > a { font-weight: bold; }
+.nav-header > li.nav-active > a { 
+    /* font-weight: bold; */
+ }
+.nav-header > li.nav-active > a span.nav-text:before {
+    content: "";
+    display: block;
+    width: 57%;
+    height: 2px;
+    background: white;
+    bottom: -5px;
+    position: absolute;
+}
 .nav-header li ul { border-color: #7af #f0f0f0 #7af #f0f0f0 ; }
 .nav-header li li a { background: #fdfdfd; color: #333; }
-.nav-header li li a:hover { background: #f5f5f5; color: #7af;}
+.nav-header li li a:hover { background: inherit; color: inherit;}
 
-
+.nav-header li li a:hover:before {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 2px;
+    background: black;
+    bottom: 13px;
+    position: absolute;
+}
  
 .bk-header .nav-expand { background: #333; color: #f0f0f0; }
 .dd { background: #f0f0f0; color: #333;}
@@ -519,6 +538,7 @@ input.search-button {
     float: left;
     margin-right: 18px;
     margin-top: 12px;
+    margin-left: 27%;
 }
 .right-bar-header .link-block {
     float: left;
@@ -1547,7 +1567,7 @@ text-transform: uppercase;
 .sustainability-block {
   display: flex;
   flex-wrap: wrap;
-  max-width: 200px;
+  max-width: 260px;
   width: 100%;
 }
 
@@ -1570,9 +1590,10 @@ line-height: 24px;
   width: auto;
 }
 .learn-sub-menu-item .bg-img-menu {
-    width: 390px;
+    max-width: 390px;
+    width: 25%;
     height: 338px;
-    background: center / contain no-repeat url(../images/101-menu-baackground-img.jpg);
+    background: top right / contain no-repeat url(../images/101-menu-baackground-img.jpg);
     flex-shrink: 0;
     border-radius: 0px 0px 0px 40px;
 }
@@ -1589,6 +1610,9 @@ line-height: 24px;
 
 .sep-active, .sep-images { float: none; width: auto; }
 .sub-image { width: 33.3%;}
+.header-search-form-wrap {
+    margin-left: auto;
+}
 }
 
 @media (max-width: 1024px) {
@@ -1601,7 +1625,7 @@ line-height: 24px;
 .nav-header > li.nav-active > a { border-top: none; }
 .nav-header li ul { margin: 0; }
 .bk-header .header-menu:after { display: none; }
-.nav-header li ul, .nav-header li ul li ul { position: static; width: auto; float: none; margin-left: 20px; border: none; border-left: 1px solid #c0c0c0;  }
+.nav-header li ul, .nav-header li ul li ul, .nav-header li.learn ul { position: static; width: auto; float: none; margin-left: 20px; border: none; border-left: 1px solid #c0c0c0;  }
 .nav-header li li a { background: none; border: none; border-bottom: 1px solid #c0c0c0; padding: 10px; }
 .nav-header li li:last-child a { border: none; }
 .nav-header li.nav-open { border-bottom: 1px solid #c0c0c0; }
