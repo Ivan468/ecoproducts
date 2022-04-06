@@ -1550,10 +1550,15 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
   padding: 0px 0 30px 50px;
 }
 .benefits-block .body > div div {
-    flex-basis: 215px;
+    flex-basis: 204px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
 }
 .benefits-block .body {
-    padding: 40px 10px;
+    padding: 30px 10px;
 }
 .benefits-block .body p{
     font-family: 'Gotham';
@@ -1580,7 +1585,6 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
-padding: 8px 12px;
 color: white;
 width: 90px;
 margin: 0 auto;
@@ -1658,6 +1662,13 @@ line-height: 24px;
     color: #202944;
     height: 20px;
     padding: 7px 10px;
+}
+.new-product-top .body a {
+    color: #202944;
+    text-decoration: none;
+}
+.new-product-top .body a:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 1260px) {
