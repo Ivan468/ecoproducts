@@ -709,6 +709,8 @@ ul.nav-footer li:last-child:after { content: ""; }
 .bk-product-details .accessories .buy-block { float: none; width: auto; }
 /*** end product details styles ***/
 
+
+
 /*** begin product reviews styles ***/
 .reviews-stats { padding: 10px ; background: #dedede; border: 1px solid #aaa; } 
 .product-emotions { float: right; padding: 0; }
@@ -1670,7 +1672,141 @@ line-height: 24px;
 .new-product-top .body a:hover {
     text-decoration: underline;
 }
+.product-features-block {
+    margin-top: 0;
+    background: none;
+}
+.product-features-block .body{
+     background: center / cover no-repeat url(../images/feature-bg.jpg);
+}
+.product-features-block .flex-block > div {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+ .product-features-block .flex-block-deep {
+     margin: 0 40px;}
+.product-features-block .flex-block, .product-features-block .flex-block-deep {
+  display: flex;
+}
+.product-features-block .flex-block {
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+.product-features-block .flex-block >div {
+ flex-basis: 100%;
+ max-width: 532px;
+    box-sizing: border-box;
+}
+.product-features-block h4{
+font-family: 'DIN Next LT Pro';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 24px;
+text-align: center;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+.product-features-block h2 {
+font-family: 'DIN Next LT Pro';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 48px;
+text-align: center;
+color: #FFFFFF;
+}
+.product-features-block p {
+font-family: 'Gotham';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 28px;
+text-align: center;
+color: #FFFFFF;
+}
+.product-features-block .advantage {
+    font-family: 'Gotham';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+text-align: center;
+letter-spacing: 0.025em;
+text-transform: uppercase;
+width: 129px;
+height: 28px;
+border-radius: 14px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 40px 40px 24px 40px;
+}
 
+.product-features-block .left-bl .advantage {
+color: #065F46;
+background: #D1FAE5; 
+}
+.product-features-block .right-bl  .advantage {
+color: #1E40AF;
+background: #DBEAFE;
+}
+
+.product-features-block .left-bl h3{
+    font-family: 'DIN Next LT Pro';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 40px;
+letter-spacing: -0.025em;
+color: #0E8D63;
+margin: 0 5px;
+}
+
+.product-features-block .right-bl h3{
+    font-family: 'DIN Next LT Pro';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 40px;
+letter-spacing: -0.025em;
+color: #2B5DB0;
+margin: 0 5px;
+}
+
+.product-features-block .left-bl .flex-block-deep p {
+    font-family: 'Gotham';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+color: #0E8D63;}
+.product-features-block .right-bl .flex-block-deep  p {
+    font-family: 'Gotham';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+color: #2B5DB0;}
+.product-features-block .left-bl .bg-color {
+    background: #0E8D63; color:white;
+}
+.product-features-block .right-bl .bg-color {
+   background: #2B5DB0; color:white;
+}
+.product-features-block   .bg-color {
+ padding:  40px;
+ font-family: 'Gotham';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+color: #FFFFFF;
+}
 @media (max-width: 1260px) {
 .fm-header, .layout, .fm-footer { width: 1000px; } 
 .fm-header  {}
