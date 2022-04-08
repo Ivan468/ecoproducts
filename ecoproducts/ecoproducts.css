@@ -30,16 +30,6 @@
 
 @font-face {
     font-family: 'Gotham';
-    src: url('../fonts/Gotham-BoldItalic.woff2') format('woff2'),
-        url('../fonts/Gotham-BoldItalic.woff') format('woff'),
-        url('../fonts/Gotham-BoldItalic.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gotham';
     src: url('../fonts/Gotham-Bold.woff2') format('woff2'),
         url('../fonts/Gotham-Bold.woff') format('woff'),
         url('../fonts/Gotham-Bold.ttf') format('truetype');
@@ -48,15 +38,6 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Gotham';
-    src: url('../fonts/Gotham-Bold_1.woff2') format('woff2'),
-        url('../fonts/Gotham-Bold_1.woff') format('woff'),
-        url('../fonts/Gotham-Bold_1.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
 
 @font-face {
     font-family: 'Gotham';
@@ -78,81 +59,12 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Gotham';
-    src: url('../fonts/Gotham-BookItalic.woff2') format('woff2'),
-        url('../fonts/Gotham-BookItalic.woff') format('woff'),
-        url('../fonts/Gotham-BookItalic.ttf') format('truetype');
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gotham';
-    src: url('../fonts/Gotham-Medium_1.woff2') format('woff2'),
-        url('../fonts/Gotham-Medium_1.woff') format('woff'),
-        url('../fonts/Gotham-Medium_1.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gotham';
-    src: url('../fonts/Gotham-MediumItalic.woff2') format('woff2'),
-        url('../fonts/Gotham-MediumItalic.woff') format('woff'),
-        url('../fonts/Gotham-MediumItalic.ttf') format('truetype');
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
 
 @font-face {
     font-family: 'Gotham';
     src: url('../fonts/Gotham-Light.woff2') format('woff2'),
         url('../fonts/Gotham-Light.woff') format('woff'),
         url('../fonts/Gotham-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gotham';
-    src: url('../fonts/Gotham-BookItalic_1.woff2') format('woff2'),
-        url('../fonts/Gotham-BookItalic_1.woff') format('woff'),
-        url('../fonts/Gotham-BookItalic_1.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gotham';
-    src: url('../fonts/Gotham-ThinItalic.woff2') format('woff2'),
-        url('../fonts/Gotham-ThinItalic.woff') format('woff'),
-        url('../fonts/Gotham-ThinItalic.ttf') format('truetype');
-    font-weight: 100;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gotham';
-    src: url('../fonts/Gotham-LightItalic.woff2') format('woff2'),
-        url('../fonts/Gotham-LightItalic.woff') format('woff'),
-        url('../fonts/Gotham-LightItalic.ttf') format('truetype');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gotham';
-    src: url('../fonts/Gotham-Light_1.woff2') format('woff2'),
-        url('../fonts/Gotham-Light_1.woff') format('woff'),
-        url('../fonts/Gotham-Light_1.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -168,7 +80,13 @@
     font-style: normal;
     font-display: swap;
   }
-
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
 
 
 /*** General styles ***/
@@ -1678,12 +1596,16 @@ line-height: 24px;
 }
 .product-features-block .body{
      background: center / cover no-repeat url(../images/feature-bg.jpg);
+        padding: 96px 10px 96px;
 }
 .product-features-block .flex-block > div {
     background: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    overflow: hidden;
 }
  .product-features-block .flex-block-deep {
      margin: 0 40px;}
@@ -1694,6 +1616,7 @@ line-height: 24px;
     flex-wrap: wrap;
     gap: 24px;
     justify-content: center;
+    margin-top: 64px;
 }
 .product-features-block .flex-block >div {
  flex-basis: 100%;
@@ -1709,7 +1632,7 @@ line-height: 24px;
 text-align: center;
 letter-spacing: 0.05em;
 text-transform: uppercase;
-color: #FFFFFF;
+color: #FFFFFF;margin-top: 0;
 }
 .product-features-block h2 {
 font-family: 'DIN Next LT Pro';
@@ -1764,9 +1687,17 @@ font-size: 36px;
 line-height: 40px;
 letter-spacing: -0.025em;
 color: #0E8D63;
-margin: 0 5px;
+margin:  5px 0;
 }
-
+.product-features-block .bg-color li {
+    margin-bottom: 16px;
+}
+.product-features-block .flex-block-deep p {
+    margin: 0;
+}
+.product-features-block .flex-block-deep {
+    margin-bottom: 24px;
+}
 .product-features-block .right-bl h3{
     font-family: 'DIN Next LT Pro';
 font-style: normal;
@@ -1775,7 +1706,7 @@ font-size: 36px;
 line-height: 40px;
 letter-spacing: -0.025em;
 color: #2B5DB0;
-margin: 0 5px;
+margin:  5px 0;
 }
 
 .product-features-block .left-bl .flex-block-deep p {
@@ -1806,6 +1737,47 @@ font-weight: 400;
 font-size: 16px;
 line-height: 24px;
 color: #FFFFFF;
+}
+.product-features-block .bg-color a{
+ font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+color: #FFFFFF;
+text-align: center;
+display: block;
+text-decoration: none;
+}
+.product-features-block .img-wrap {
+    margin-right: 16px;
+}
+.product-features-block .compare-bl {
+    display: flex; gap: 20px;
+    margin: 33px auto 0 ;
+    max-width: 1088px;
+    background: white;
+    border-radius: 8px;
+    padding: 40px 38px 40px 40px; box-sizing: border-box;
+    align-items: center;
+}
+.product-features-block .compare-bl p {
+font-family: 'Gotham'; margin: 0;
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 28px;
+color: #4B5563;
+}
+.product-features-block .compare-bl a {
+    background: #202944; display: block;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
+    border-radius: 34px; text-decoration: none;
+    font-family: 'Gotham';font-style: normal;
+    font-weight: 400;font-size: 16px;
+    line-height: 24px;color: #FFFFFF;
+    display: flex; flex-direction: row; justify-content: center;  align-items: center;
+    width: 154px; height: 56px;
 }
 @media (max-width: 1260px) {
 .fm-header, .layout, .fm-footer { width: 1000px; } 
