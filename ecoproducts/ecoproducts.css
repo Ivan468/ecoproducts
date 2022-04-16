@@ -1787,6 +1787,7 @@ color: #4B5563;
     width: 154px; padding: 16px 40px; white-space: nowrap;
 }
 /*start video_block_watch */
+.video_block_watch.block {margin: 0;}
 .video_block_watch .from-the-dish {
     box-sizing: border-box;
     padding: 96px 40px 48px;
@@ -1901,11 +1902,12 @@ margin: 20px 0px 28px;
 }
 .mini-video-block .video_block_watch .video-wrap {
     max-width: 448px;
-    padding-bottom: 24.6%;
+    padding-bottom: 25.6%;
+    flex-basis: 72%;
 }
-
+.mini-video-block.block { margin: 0;} 
 .mini-video-block .video_block_watch .right-text-block {
-    flex-basis: auto;
+    flex-basis: 662px;
     padding: 0 24px;
 }
 .mini-video-block .video_block_watch .video-block-deep a {
@@ -1919,8 +1921,15 @@ font-weight: 700;
 font-size: 16px;letter-spacing: 0.05em;
 text-transform: uppercase;
 }
+.mini-video-block .video_block_watch .video-block-deep p{
+    font-family: 'Gotham';
+font-style: normal;
+font-weight: 325;
+font-size: 18px;
+line-height: 24px;
+}
 .mini-video-block .video_block_watch .video-block-deep{
-   padding: 95px 70px 95px;
+   padding: 95px 75px 95px 108px;
     background: 464px -25px/ auto no-repeat url(../images/bg-mini-video-block.png),#202944;
 }
 /* END mini-video-block */
@@ -1957,6 +1966,10 @@ text-transform: uppercase;
 .sub-image { width: 33.3%;}
 .header-search-form-wrap {
     margin-left: auto;
+}
+.mini-video-block .video_block_watch .video-block-deep {
+   padding: 95px 40px 95px 40px;
+    background: 164px -25px/ auto no-repeat url(../images/bg-mini-video-block.png),#202944;
 }
 }
 
@@ -2041,7 +2054,11 @@ li.cart.nav-right > a > i { padding: 0 4px 0 0; }
     padding: 0;
     margin-top: 25px;
 }
-
+.mini-video-block .video_block_watch .video-wrap {
+    max-width: none;
+    padding-bottom: 57.6%;
+    flex-basis: 100%;
+}
 }
 
 @media (max-width: 780px) {
@@ -2112,6 +2129,17 @@ font-size: 30px;}
 .video_block_watch .video-block-deep {
     padding: 40px 10px 40px;
 }
+.video_block_watch .video-block-deep h2 {
+font-size: 28px;}
+.mini-video-block .video_block_watch .video-block-deep p {font-size: 14px;
+}
+.video_block_watch .video-block-deep a {font-size: 14px;
+     line-height: 1.2;
+}
+.mini-video-block .video_block_watch .video-block-deep a {
+    width: 233px;}
+    .mini-video-block .video_block_watch .video-block-deep {
+   padding: 45px 20px 95px 20px;}
 }
 
 
