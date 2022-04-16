@@ -1895,6 +1895,35 @@ margin: 20px 0px 28px;
     align-items: center;
 }
 /* END video_block_watch */
+/* START mini-video-block */
+.mini-video-block .body {
+    padding: 0;
+}
+.mini-video-block .video_block_watch .video-wrap {
+    max-width: 448px;
+    padding-bottom: 24.6%;
+}
+
+.mini-video-block .video_block_watch .right-text-block {
+    flex-basis: auto;
+    padding: 0 24px;
+}
+.mini-video-block .video_block_watch .video-block-deep a {
+    width: 314px;
+    margin-top: 32px;
+}
+.mini-video-block .video_block_watch .video-block-deep h3 {
+font-family: 'DIN Next LT Pro';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;letter-spacing: 0.05em;
+text-transform: uppercase;
+}
+.mini-video-block .video_block_watch .video-block-deep{
+   padding: 95px 70px 95px;
+    background: 464px -25px/ auto no-repeat url(../images/bg-mini-video-block.png),#202944;
+}
+/* END mini-video-block */
 @media (max-width: 1260px) {
 .fm-header, .layout, .fm-footer { width: 1000px; } 
 .fm-header  {}
