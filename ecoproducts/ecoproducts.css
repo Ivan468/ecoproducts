@@ -2220,6 +2220,9 @@ li.cart.nav-right > a > i { padding: 0 4px 0 0; }
 .footer-grid-container :is(.sustainability-li, .company-li, .portal-li)   {
     padding: 0;
 }
+.grid-logo-and-social {
+    padding: 40px;
+}
 .footer-ref-copyright {
     justify-content: space-around;
 }
