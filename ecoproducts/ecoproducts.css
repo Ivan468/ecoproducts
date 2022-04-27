@@ -240,7 +240,7 @@ a:hover { color: #7af; }
  }
 
 .nav-header li ul { border-color: #7af #f0f0f0 #7af #f0f0f0 ; }
-.nav-header li li a { background: white; color: #333; }
+.nav-header li li a { background: white; color: #111827; }
 .nav-header li li a:hover { background: inherit; color: inherit;
 text-decoration: underline 2px;
 text-underline-offset: 6px;    
@@ -551,7 +551,7 @@ ul.nav-bar li.cart ul { width: 300px; padding: 10px; }
     margin: 5px 0px;
     padding: 0px;
     position: absolute;
-    width: auto;
+    width: 100%;
     z-index: 101;
     left: 0;
     top: 70px;
@@ -561,7 +561,70 @@ ul.nav-bar li.cart ul { width: 300px; padding: 10px; }
     background-color: white;
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
+/* start  company-submenu*/
+.learn-sub-menu-item.company-submenu {
 
+}
+.learn-sub-menu-item.company-submenu .news-block-wrap{
+    background: #F9FAFB;
+    flex-basis: 50%;
+}
+.learn-sub-menu-item.company-submenu  .company-submenu-menu-items {
+    flex-basis: 50%; align-content:flex-start;
+    display: flex; flex-wrap: wrap;
+}
+.learn-sub-menu-item.company-submenu .news-item-menu {
+    display: flex;margin-bottom: 24px; text-decoration: none;
+}
+ 
+.learn-sub-menu-item.company-submenu .news-item-menu    {
+    height: auto;
+}
+ 
+.learn-sub-menu-item.company-submenu .news-item-menu *:hover{
+    text-decoration: underline; cursor: pointer;
+}
+.learn-sub-menu-item.company-submenu .img-news-wrap{
+    max-width: 128px;
+    width: 100%;border-radius: 6px; overflow: hidden;
+    height: 80px; margin-right: 32px;
+}
+.learn-sub-menu-item.company-submenu .img-news-wrap img {
+    width: 100%;
+    height: 100%; object-fit: cover;
+}
+.learn-sub-menu-item.company-submenu h4 {
+    font-family: 'Inter'; margin-top: 0;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;margin-bottom: 4px;
+color: #111827;
+}
+.learn-sub-menu-item.company-submenu  p {
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400; margin: 0;
+font-size: 14px;
+line-height: 20px;
+color: #6B7280;
+}
+.learn-sub-menu-item.company-submenu .see-more {
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+color: #4B5563; text-decoration: none;
+}
+.learn-sub-menu-item.company-submenu .news-block-wrap {
+    padding: 0px 71px 48px 48px;
+}
+.nav-header .learn-sub-menu-item.company-submenu {
+    padding-bottom: 0;
+}
+ 
+/* end  company-submenu*/
 /*** footer ***/
 .bk-footer { background: none; border: none; text-align: center; }
 ul.nav-footer { margin: 0; padding: 0; display: inline-block; }
