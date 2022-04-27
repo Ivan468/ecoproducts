@@ -691,7 +691,9 @@ color: #58595B;
     height: 100%;
     object-fit: cover;
 }
-
+.slideshow-top-wrapper {
+position: relative; height: auto; width: 550px
+}
 /* end slideshow */
 /*** footer ***/
 .bk-footer { background: none; border: none; text-align: center; }
