@@ -321,6 +321,12 @@ div.message     { color: #0000FF; text-align: center; border: 1px solid #AAAAFF;
 .padding10px { padding: 10px; }
 .table-data td td, .table-data th th { padding: 0; }
 
+.bk-message { color: #0000FF; text-align: center; border: 1px solid #AAAAFF; padding: 10px; background: #EEEEFF; border-radius: 5px; }
+.bk-error { color: #FF0000; text-align: center; border: 1px solid #FFAAAA; padding: 10px; background: #FFEEEE; border-radius: 5px; }
+.bk-intro, .bk-filter { border: 1px solid #C0C0C0; padding: 10px; border-radius: 5px; }
+.block.bk-intro:first-child, .block.bk-filter:first-child, .block.bk-message:first-child { margin-top: 30px; }
+.bk-articles-hot { position: relative; } 
+
 .introBlock {border: 1px solid #8A8A8A; margin: 5px; padding: 6px;}
 .titleText		{color: #1584D2; text-decoration: none; }
 .top				{font-size: 11px;}
@@ -1378,13 +1384,14 @@ div.orderPopup {background: #FFFFFF; border: 1px solid #D5D4E9; padding: 2px; di
 .support-offline .head { background-color: #EEE; bo2rder: 2px solid #999; color: #999; }
 .chat-offline { font-size: 22px; font-style: italic; padding: 40px 20px; text-align: center; cursor: pointer; }
 
-/*** SlideShow Styles ***/
-.bk-sliders.content-only { border: none; background: none; border-radius: 0; padding: 0; }
-.bk-sliders.content-only .head { display: none; }
-.bk-sliders.content-only div.body { border: none; background: none; border-radius: 0; padding: 0;  }
-.bk-sliders { position: relative; }
 
-.slides img { max-width: none; }
+/*** SlideShow Styles ***/
+.bk-slideshow.content-only { border: none; background: none; border-radius: 0; padding: 0; }
+.bk-slideshow.content-only .head { display: none; }
+.bk-slideshow.content-only div.body { border: none; background: none; border-radius: 0; padding: 0;  }
+.bk-slideshow { position: relative; }
+
+.slide img { max-width: none; }
 .slides-slideshow .slide { transition: 2s opacity, 2s left; }
 .slides-slideshow .slide img { max-width: 100%; }
 
@@ -1402,33 +1409,34 @@ div.orderPopup {background: #FFFFFF; border: 1px solid #D5D4E9; padding: 2px; di
 
 .banners img { max-width: none; }
 .banners-slideshow .banner img { max-width: 100%; }
-.bk-message { color: #0000FF; text-align: center; border: 1px solid #AAAAFF; padding: 10px; background: #EEEEFF; border-radius: 5px; }
-.bk-error { color: #FF0000; text-align: center; border: 1px solid #FFAAAA; padding: 10px; background: #FFEEEE; border-radius: 5px; }
-.bk-intro, .bk-filter { border: 1px solid #C0C0C0; padding: 10px; border-radius: 5px; }
-.block.bk-intro:first-child, .block.bk-filter:first-child, .block.bk-message:first-child { margin-top: 30px; }
-.bk-articles-hot { position: relative; } 
-/* slider navigation */
-.slider-nav { position: absolute; bottom: 10px; left: 0; right: 0; text-align: center; }
-.slide-nav { font: 20px FA; display: inline-block; padding: 5px; color: #ccc; text-decoration: none; opacity: 0.5; cursor: pointer; }
-.slide-nav { transition: 2s opacity, 2s color; } 
-.slide-nav span { display: none; }
-.slide-nav:hover { transition: none; color: #999; }
-.slide-nav.slide-active { opacity: 1; color: #159dd9; }
-.slide-nav:before { content: "\f111"; }
-.slide-prev, .slide-next { 
-	display: flex; align-items: center; justify-content: center; 
-	font: 28px FA; text-decoration: none; color: #eee; 
-	position: absolute; top: 0; bottom: 0; width: 50px; z-index: 10000; 
-}
-.slide-prev:hover, .slide-next:hover { color: #fff; background: rgba(0, 0, 0, 0.1); }
-.slide-prev { left: 0; }
-.slide-next { right: 0; }
-.slide-prev:before { content: "\f053";
-	 /* "\f0a5";  */
-	}
-.slide-next:before { content: "\f054"; 
-	/* "\f0a4";  */
-}
+
+/* slideshow navigation */
+[data-type="nav"] { position: absolute; bottom: 10px; left: 0; right: 0; text-align: center; z-index: 100; }
+[data-type="nav"][data-pos="top"] { bottom: auto; top: 10px; }
+[data-type="nav"][data-pos="middle"] { bottom: auto; top: 0; bottom: 0; display: flex; justify-content: center; align-items: center;}
+[data-type="nav"][data-align="left"] { text-align: left; }
+[data-type="nav"][data-align="right"] { text-align: right; }
+[data-type="nav"][data-pos="above"], [data-type="nav"][data-pos="under"] { position: static; bottom: auto; left: auto; right: auto; }
+[data-type="nav-slide"] { font: 20px FA; display: inline-block; padding: 5px; color: #ccc; text-decoration: none; opacity: 0.5; cursor: pointer; }
+[data-type="nav-slide"] { transition: 2s opacity, 2s color; } 
+[data-type="nav-slide"] [data-type="desc"] { display: none; }
+[data-type="nav-slide"]:hover { transition: none; color: #999; }
+[data-type="nav-slide"][data-active] { opacity: 1; color: #159dd9; }
+[data-type="nav-slide"]:before { content: "\f111"; }
+[data-type="slide-prev"], [data-type="slide-next"] { display: flex; align-items: center; justify-content: center; font: 28px FA; text-decoration: none; color: #eee; cursor: pointer; position: absolute; top: 0; bottom: 0; width: 50px; z-index: 10000; }
+[data-type="nav-prev"], [data-type="nav-next"] { display: inline-block; padding: 5px; color: #159dd9; font: 20px FA; text-decoration: none; cursor: pointer; }
+[data-type="nav-prev"] span, [data-type="nav-next"] span { display: none; }
+[data-type="nav-prev"]:before { content: "\f053"; }
+[data-type="nav-next"]:before { content: "\f054"; }
+[data-type="nav-summary"] { font-size: 20px; padding: 3px 2px; display: inline-block; color: #159dd9; }
+[data-type="nav-summary"] > * { padding: 2px; }
+
+[data-type="slide-prev"] [data-type="desc"], [data-type="slide-next"] [data-type="desc"] { display: none; }
+[data-type="slide-prev"]:hover, [data-type="slide-next"]:hover { color: #fff; background: rgba(0, 0, 0, 0.1); }
+[data-type="slide-prev"] { left: 0; }
+[data-type="slide-next"] { right: 0; }
+[data-type="slide-prev"]:before { content: "\f053"; "\f0a5"; }
+[data-type="slide-next"]:before { content: "\f054"; "\f0a4"; }
 /*** end of slideshow styles ***/
 
 .imageSelect { border: 1px solid #ac7f1a; margin: 2px 2px 5px 5px; }
@@ -2219,9 +2227,6 @@ li.cart.nav-right > a > i { padding: 0 4px 0 0; }
 }
 .footer-grid-container :is(.sustainability-li, .company-li, .portal-li)   {
     padding: 0;
-}
-.grid-logo-and-social {
-    padding: 40px;
 }
 .footer-ref-copyright {
     justify-content: space-around;
