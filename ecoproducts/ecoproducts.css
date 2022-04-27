@@ -625,6 +625,34 @@ color: #4B5563; text-decoration: none;
 }
  
 /* end  company-submenu*/
+/* START slideshow-top */
+.slideshow-top .body {
+    padding: 0;
+}
+.slideshow-top .body >div {
+    display: flex;
+    justify-content: space-between;
+   flex-wrap: wrap;
+}
+.slideshow-top h2{
+    font-family: 'DIN Next LT Pro';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 48px;
+text-align: center;
+color: #202944;
+}
+.slideshow-top p{
+    font-family: 'Gotham';
+font-style: normal;
+font-weight: 325;
+font-size: 18px;
+line-height: 28px;
+text-align: center; max-width: 537px;
+color: #58595B;
+}
+/* end slideshow */
 /*** footer ***/
 .bk-footer { background: none; border: none; text-align: center; }
 ul.nav-footer { margin: 0; padding: 0; display: inline-block; }
