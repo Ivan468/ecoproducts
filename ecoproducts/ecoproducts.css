@@ -625,6 +625,10 @@ color: #4B5563; text-decoration: none;
     padding-bottom: 0;
 }
  
+.nav-header .learn-sub-menu-item.stories {
+    padding-top: 39px;
+    padding-bottom: 33px;
+}
 /* end  company-submenu*/
 /* START slideshow-top */
 .slideshow-top .body {
@@ -2345,6 +2349,9 @@ li.cart.nav-right > a > i { padding: 0 4px 0 0; }
     max-width: none;
     padding-bottom: 57.6%;
     flex-basis: 100%;
+}
+.learn-sub-menu-item.company-submenu .news-block-wrap {
+    flex-basis: 100%;     padding: 0px 17px 17px 17px;
 }
 }
 
