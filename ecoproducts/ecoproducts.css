@@ -1548,7 +1548,13 @@ div.orderPopup {background: #FFFFFF; border: 1px solid #D5D4E9; padding: 2px; di
 .banners-slideshow .banner img { max-width: 100%; }
 
 /* slideshow navigation */
-[data-type="nav"] { position: absolute; bottom: 10px; left: 0; right: 0; text-align: center; z-index: 100; }
+[data-type="nav"] { position: absolute; bottom: 10px; left: 0; right: 0; text-align: center; z-index: 100; 
+    width: 136px; height: 45px; margin: 0 auto;font-family: 'Gotham';  font-weight: 500;
+    background: rgba(255, 255, 255, 0.87);
+    border-radius: 50px;
+    padding: 8px 10px 10px 10px;
+    box-sizing: border-box;
+}
 [data-type="nav"][data-pos="top"] { bottom: auto; top: 10px; }
 [data-type="nav"][data-pos="middle"] { bottom: auto; top: 0; bottom: 0; display: flex; justify-content: center; align-items: center;}
 [data-type="nav"][data-align="left"] { text-align: left; }
@@ -1558,14 +1564,14 @@ div.orderPopup {background: #FFFFFF; border: 1px solid #D5D4E9; padding: 2px; di
 [data-type="nav-slide"] { transition: 2s opacity, 2s color; } 
 [data-type="nav-slide"] [data-type="desc"] { display: none; }
 [data-type="nav-slide"]:hover { transition: none; color: #999; }
-[data-type="nav-slide"][data-active] { opacity: 1; color: #159dd9; }
+[data-type="nav-slide"][data-active] { opacity: 1; color: #202944;  }
 [data-type="nav-slide"]:before { content: "\f111"; }
 [data-type="slide-prev"], [data-type="slide-next"] { display: flex; align-items: center; justify-content: center; font: 28px FA; text-decoration: none; color: #eee; cursor: pointer; position: absolute; top: 0; bottom: 0; width: 50px; z-index: 10000; }
-[data-type="nav-prev"], [data-type="nav-next"] { display: inline-block; padding: 5px; color: #159dd9; font: 20px FA; text-decoration: none; cursor: pointer; }
+[data-type="nav-prev"], [data-type="nav-next"] { display: inline-block; padding: 5px; color: #202944; font: 20px FA; text-decoration: none; cursor: pointer; }
 [data-type="nav-prev"] span, [data-type="nav-next"] span { display: none; }
 [data-type="nav-prev"]:before { content: "\f053"; }
 [data-type="nav-next"]:before { content: "\f054"; }
-[data-type="nav-summary"] { font-size: 20px; padding: 3px 2px; display: inline-block; color: #159dd9; }
+[data-type="nav-summary"] { font-size: 14px; padding: 3px 2px; display: inline-block; color: #202944; position: relative;  bottom: 3px;}
 [data-type="nav-summary"] > * { padding: 2px; }
 
 [data-type="slide-prev"] [data-type="desc"], [data-type="slide-next"] [data-type="desc"] { display: none; }
