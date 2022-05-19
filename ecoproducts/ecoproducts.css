@@ -457,6 +457,7 @@ input.search-button {
     margin-top: 12px;
     margin-left: 27%;
 }
+
 .right-bar-header .link-block {
     float: left;
     padding: 24px 0px;
@@ -2344,9 +2345,7 @@ position: relative;z-index: 93;
 
 .sep-active, .sep-images { float: none; width: auto; }
 .sub-image { width: 33.3%;}
-.header-search-form-wrap {
-    margin-left: auto;
-}
+ 
 .mini-video-block .video_block_watch .video-block-deep {
    padding: 95px 40px 95px 40px;
     background: 164px -25px/ auto no-repeat url(../images/bg-mini-video-block.png),#202944;
@@ -2392,7 +2391,7 @@ position: relative;z-index: 93;
 .nav-header > li.nav-active > a { border-top: none; }
 .nav-header li ul { margin: 0; }
 .bk-header .header-menu:after { display: none; }
-.nav-header li ul, .nav-header li ul li ul, .nav-header li.learn ul {  width: auto; float: none;   border: none; 
+.nav-header li ul, .nav-header li ul li ul, .nav-header li.learn ul {  width: 100%; float: none;   border: none; 
     /* border-left: 1px solid #c0c0c0;  position: static;*/ 
  }
 .nav-header li li a { background: none; border: none; border-bottom: 1px solid #c0c0c0; padding: 10px; }
@@ -2402,7 +2401,36 @@ position: relative;z-index: 93;
 .nav-header li ul ul { position: static; width: auto; }
 .nav-header li li { width: auto; float: none; }
 .nav-header li { float: left; position: static; padding: 0; width: auto; }
-.nav-header li a { font-size: 20px; padding: 10px;    color: white; }
+.nav-header li a { font-size:16px; padding: 14px 10px 10px;  color: white; }
+.bk-header .logo {
+    padding: 4px 10px 15px 14px;
+}
+.header-search-form-wrap {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    max-width: none;
+}
+.header-search-form-wrap form {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    width: 312px;
+}
+.header-search-form-wrap input.search-button {
+    font-family: "FA";
+    float: none;
+    right: 277px;
+    top: 12px;
+    position: absolute;
+    z-index: 50;
+    background: transparent;
+    color: #9CA3AF;
+    border: none;
+    font-size: 18px;
+}
+.header-search-form-wrap .search-field {position: absolute; left: 0;}
+.bk-header .right-bar-header {     width: max-content;  margin: 0 auto;}
 .nav-header li li {     background: white;}
 .nav-header li li li {  background: white;}
 .nav-header li.nav-childs {  }
