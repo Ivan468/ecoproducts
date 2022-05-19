@@ -2384,8 +2384,8 @@ position: relative;z-index: 93;
 }
 .grid-logo-and-social {height: auto;}
 .bk-header .header-menu { clear: both; width: 100%; padding: 0; }
-.bk-header .nav-expand { display: block; }
-.nav-header { display: none; margin: 0; }
+.bk-header .nav-expand { display: none; }
+.nav-header { display: initial; margin: 0; }
 .nav-header.expand-open { display: block; }
 .nav-header > li > a { top: 0; border: none; position: static; }
 .nav-header > li { border: none; }
