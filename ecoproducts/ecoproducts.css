@@ -560,7 +560,7 @@ ul.nav-bar li.cart ul { width: 300px; padding: 10px; }
 }
 .nav-header li.nav-open.learn > ul {
     background-color: white;
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+    /* box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05); */
 }
 /* start  company-submenu*/
 .learn-sub-menu-item.company-submenu {
@@ -2383,7 +2383,7 @@ position: relative;z-index: 93;
     justify-self: center; padding-right: 0;
 }
 .grid-logo-and-social {height: auto;}
-.bk-header .header-menu { clear: both; width: 100%; padding: 0; }
+.bk-header .header-menu { width: auto; padding: 0; }
 .bk-header .nav-expand { display: none; }
 .nav-header { display: initial; margin: 0; }
 .nav-header.expand-open { display: block; }
@@ -2392,21 +2392,22 @@ position: relative;z-index: 93;
 .nav-header > li.nav-active > a { border-top: none; }
 .nav-header li ul { margin: 0; }
 .bk-header .header-menu:after { display: none; }
-.nav-header li ul, .nav-header li ul li ul, .nav-header li.learn ul { position: static; width: auto; float: none; margin-left: 20px; border: none; border-left: 1px solid #c0c0c0;  }
+.nav-header li ul, .nav-header li ul li ul, .nav-header li.learn ul {  width: auto; float: none;   border: none; 
+    /* border-left: 1px solid #c0c0c0;  position: static;*/ 
+ }
 .nav-header li li a { background: none; border: none; border-bottom: 1px solid #c0c0c0; padding: 10px; }
 .nav-header li li:last-child a { border: none; }
-.nav-header li.nav-open { border-bottom: 1px solid #c0c0c0; }
+/* .nav-header li.nav-open { border-bottom: 1px solid #c0c0c0; } */
 .nav-header li ul { position: static; width: auto; }
 .nav-header li ul ul { position: static; width: auto; }
 .nav-header li li { width: auto; float: none; }
-.nav-header li { float: none; position: static; padding: 0; width: auto; }
-.nav-header li a { font-size: 20px; padding: 10px; border-bottom: 1px solid #c0c0c0; color: #444; }
-.nav-header li { background: white;}
+.nav-header li { float: left; position: static; padding: 0; width: auto; }
+.nav-header li a { font-size: 20px; padding: 10px;    color: white; }
 .nav-header li li {     background: white;}
 .nav-header li li li {  background: white;}
 .nav-header li.nav-childs {  }
 .nav-header li.nav-childs a {  }
-.nav-header li.nav-childs i { display: block; float: right; cursor: pointer; padding: 10px; font-size: 20px; }
+.nav-header li.nav-childs i { display: none; float: right; cursor: pointer; padding: 10px; font-size: 20px; }
 .nav-header li.nav-childs i:hover { color: #7af; }
 .nav-header li.nav-childs > i:before { content: "\f107"; }
 .nav-header li.nav-childs.nav-open > i:before { content: "\f106"; }
@@ -2496,6 +2497,9 @@ li.cart.nav-right > a > i { padding: 0 4px 0 0; }
     "sustainability-li company-li"
     "portal-li portal-li"; 
   justify-items: center; 
+}
+.nav-header .learn-sub-menu-item h3 {
+  margin: 25px 0;
 }
 .footer-grid-container :is(.sustainability-li, .company-li, .portal-li)   {
     padding: 0;
