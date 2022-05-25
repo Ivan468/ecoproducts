@@ -240,7 +240,7 @@ a:hover { color: #7af; }
     /* font-weight: bold; */
  }
 
-.nav-header li ul { border-color: #7af #f0f0f0 #7af #f0f0f0 ; }
+.nav-header li ul { border-color: #7af #f0f0f0 #7af #f0f0f0 ; box-shadow: 3px 3px 9px -5px #777; }
 .nav-header li li a { background: white; color: #111827; }
 .nav-header li li a:hover { background: inherit; color: inherit;
 text-decoration: underline 2px;
@@ -1020,13 +1020,13 @@ a.chooseOptions { color:red; background-color: #ffeeee; border: 1px solid #FFA0A
 
 /*** New Catalog Categories List ***/
 .category { padding: 6px 2px 6px 16px; position: relative; }
-.category:before { content: "\f0da"; font: 14px FA; float: left; padding-right: 10px; position: absolute; top: 8px; left: 0; } 
+.bk-categories-catalog .category:before { content: "\f0da"; font: 14px FA; float: left; padding-right: 10px; position: absolute; top: 8px; left: 0; } 
 .category-name { font-size: 14px; font-weight: bold; }
 .category-name.before-image { display: none; }
 .category-name.after-image { display: block; }
 .category.restricted .category-name:after{ font: 14px FA; content:"\f023"; padding-left: 5px;  }
 .category.restricted:after { display: none; }
-.category-image { float: right; padding-right: 5px; }
+.category-image { padding-right: 5px; }
 .category-subs { margin: 0; padding: 2px 0 0 0px; }
 .category-subs li { list-style: none; padding: 0 4px 0 0; float: left; }
 .category-subs li:after { content: ", "; }
@@ -1528,6 +1528,7 @@ div.orderPopup {background: #FFFFFF; border: 1px solid #D5D4E9; padding: 2px; di
 .bk-slideshow.content-only .head { display: none; }
 .bk-slideshow.content-only div.body { border: none; background: none; border-radius: 0; padding: 0;  }
 .bk-slideshow { position: relative; }
+[data-type="slider"] { transition: 2s left linear, 2s top linear; }
 
 .slide img { max-width: none; }
 .slides-slideshow .slide { transition: 2s opacity, 2s left; }
@@ -1549,18 +1550,18 @@ div.orderPopup {background: #FFFFFF; border: 1px solid #D5D4E9; padding: 2px; di
 .banners-slideshow .banner img { max-width: 100%; }
 
 /* slideshow navigation */
-[data-type="nav"] { position: absolute; bottom: 10px; left: 0; right: 0; text-align: center; z-index: 100; 
+[data-type="nav-panel"] { position: absolute; bottom: 10px; left: 0; right: 0; text-align: center; z-index: 100; 
     width: 136px; height: 45px; margin: 0 auto;font-family: 'Gotham';  font-weight: 500;
     background: rgba(255, 255, 255, 0.87);
     border-radius: 50px;
     padding: 8px 10px 10px 10px;
     box-sizing: border-box;
 }
-[data-type="nav"][data-pos="top"] { bottom: auto; top: 10px; }
-[data-type="nav"][data-pos="middle"] { bottom: auto; top: 0; bottom: 0; display: flex; justify-content: center; align-items: center;}
-[data-type="nav"][data-align="left"] { text-align: left; }
-[data-type="nav"][data-align="right"] { text-align: right; }
-[data-type="nav"][data-pos="above"], [data-type="nav"][data-pos="under"] { position: static; bottom: auto; left: auto; right: auto; }
+[data-type="nav-panel"][data-pos="top"] { bottom: auto; top: 10px; }
+[data-type="nav-panel"][data-pos="middle"] { bottom: auto; top: 0; bottom: 0; display: flex; justify-content: center; align-items: center;}
+[data-type="nav-panel"][data-align="left"] { text-align: left; }
+[data-type="nav-panel"][data-align="right"] { text-align: right; }
+[data-type="nav-panel"][data-pos="above"], [data-type="nav-panel"][data-pos="under"] { position: static; bottom: auto; left: auto; right: auto; }
 [data-type="nav-slide"] { font: 20px FA; display: inline-block; padding: 5px; color: #ccc; text-decoration: none; opacity: 0.5; cursor: pointer; }
 [data-type="nav-slide"] { transition: 2s opacity, 2s color; } 
 [data-type="nav-slide"] [data-type="desc"] { display: none; }
@@ -1735,30 +1736,11 @@ line-height: 24px;
     height: 20px;
     padding: 7px 10px;
 }
-.new-product-top .body a {
-    color: #202944;
-    text-decoration: none;
-}
-.new-product-top .body a:hover {
-    text-decoration: underline;
-}
-.product-features-block {
-    margin-top: 0;
-    background: none;
-}
-.product-features-block .body{
-     background: center / cover no-repeat url(../images/feature-bg.jpg);
-        padding: 96px 10px 96px;
-}
-.product-features-block .flex-block > div {
-    background: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
-    border-radius: 8px;
-    overflow: hidden;
-}
+.new-product-top .body a{color:#202944;text-decoration:none}
+.new-product-top .body a:hover{text-decoration:underline}
+.product-features-block{margin-top:0;background:0 0}
+.product-features-block .body{background:center/cover no-repeat url(../images/feature-bg.jpg);padding:96px 10px 96px}
+.product-features-block .flex-block>div{background:#fff;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 1px 3px rgba(0,0,0,.1),0 1px 2px rgba(0,0,0,.06);border-radius:8px;overflow:hidden}
  .product-features-block .flex-block-deep {
      margin: 0 40px;}
 .product-features-block .flex-block, .product-features-block .flex-block-deep {
@@ -1776,51 +1758,23 @@ line-height: 24px;
     box-sizing: border-box;
 }
 .product-features-block h4{
-font-family: 'DIN Next LT Pro';
-font-style: normal;
-font-weight: 700;
-font-size: 18px;
-line-height: 24px;
+font: normal 700 18px/24px 'DIN Next LT Pro', sans-serif;
 text-align: center;
 letter-spacing: 0.05em;
 text-transform: uppercase;
 color: #FFFFFF;margin-top: 0;margin-bottom: 5px;
 }
 .product-features-block h2 {
-font-family: 'DIN Next LT Pro';
-font-style: normal;
-font-weight: 700;
-font-size: 48px;
-line-height: 48px;
+font: normal 700 48px/48px 'DIN Next LT Pro', sans-serif;
 text-align: center;
 color: #FFFFFF;
 }
 .product-features-block p {
-font-family: 'Gotham';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 28px;
+font: normal 400 20px/28px Gotham;
 text-align: center;
 color: #FFFFFF;
 }
-.product-features-block .advantage {
-    font-family: 'Gotham';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 20px;
-text-align: center;
-letter-spacing: 0.025em;
-text-transform: uppercase;
-width: 129px;
-height: 28px;
-border-radius: 14px;
-display: flex;
-align-items: center;
-justify-content: center;
-margin: 40px 40px 24px 40px;
-}
+.product-features-block .advantage{font:normal 400 14px/20px Gotham;text-align:center;letter-spacing:.025em;text-transform:uppercase;width:129px;height:28px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin:40px 40px 24px 40px}
 
 .product-features-block .left-bl .advantage {
 color: #065F46;
@@ -1832,19 +1786,12 @@ background: #DBEAFE;
 }
 
 .product-features-block .left-bl h3{
-    font-family: 'DIN Next LT Pro';
-font-style: normal;
-font-weight: 700;
-font-size: 36px;
-line-height: 40px;
+font: normal 700 36px/40px 'DIN Next LT Pro', sans-serif;
 letter-spacing: -0.025em;
 color: #0E8D63;
 margin:  5px 0;
 }
-.product-features-block .bg-color li {
-    margin-bottom: 16px; padding-left: 10px;
-    list-style-image: url("../images/icons/li-ico.png");
-}
+.product-features-block .bg-color li{margin-bottom:16px;padding-left:10px;list-style-image:url(../images/icons/li-ico.png)}
 .product-features-block .bg-color ul {
     margin: 0; padding: 0 0 0 25px;
 }
@@ -1854,97 +1801,45 @@ margin:  5px 0;
 .product-features-block .flex-block-deep {
     margin-bottom: 24px;
 }
-.product-features-block .right-bl h3{
-    font-family: 'DIN Next LT Pro';
-font-style: normal;
-font-weight: 700;
-font-size: 36px;
-line-height: 40px;
-letter-spacing: -0.025em;
-color: #2B5DB0;
-margin:  5px 0;
-}
+.product-features-block .right-bl h3{font:normal 700 36px/40px 'DIN Next LT Pro',sans-serif;letter-spacing:-.025em;color:#2b5db0;margin:5px 0}
 
 .product-features-block .left-bl .flex-block-deep p {
-    font-family: 'Gotham';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 24px;
-color: #0E8D63;}
-.product-features-block .right-bl .flex-block-deep  p {
-    font-family: 'Gotham';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 24px;
-color: #2B5DB0;}
+font: normal 400 16px/24px Gotham;color: #0E8D63;}
+.product-features-block .right-bl .flex-block-deep p{font:normal 400 16px/24px Gotham;color:#2b5db0}
 .product-features-block .left-bl .bg-color {
     background: #0E8D63; color:white;
 }
 .product-features-block .right-bl .bg-color {
    background: #2B5DB0; color:white;
 }
-.product-features-block   .bg-color {
- padding:  40px;
- font-family: 'Gotham';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 24px;
-color: #FFFFFF;
-}
+.product-features-block .bg-color{padding:40px;font:normal 400 16px/24px Gotham;color:#fff}
 .product-features-block .feature-text-block-h {
     text-align: left;
 }
-.product-features-block .bg-color a{
- font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 24px;
-color: #FFFFFF;
-text-align: center;
-display: block;
-text-decoration: none;margin-top: 25px;
-}
+.product-features-block .bg-color a{font:normal 600 16px/24px 'Inter', sans-serif;color:#fff;text-align:center;display:block;text-decoration:none;margin-top:25px}
 .product-features-block .img-wrap {
     margin-right: 16px;
 }
-.product-features-block .compare-bl {
-    display: flex; gap: 20px;
-    margin: 33px auto 0 ;
-    max-width: 1088px;
-    background: white;
-    border-radius: 8px;
-    padding: 40px 38px 40px 40px; box-sizing: border-box;
-    align-items: center;
-}
-.product-features-block .compare-bl p {
-font-family: 'Gotham'; margin: 0;
-font-style: normal;
-font-weight: 400; text-align: left;
-font-size: 18px;
-line-height: 28px;
-color: #4B5563;
-}
-.product-features-block .compare-bl a {
-    background: #202944; display: block;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
-    border-radius: 34px; text-decoration: none;
-    font-family: 'Gotham';font-style: normal;
-    font-weight: 400;font-size: 16px;
-    line-height: 24px;color: #FFFFFF;
-    display: flex; flex-direction: row; justify-content: center;  align-items: center;
-    width: 154px; padding: 16px 40px; white-space: nowrap;
-}
+.product-features-block .compare-bl{display:flex;gap:20px;margin:33px auto 0;max-width:1088px;background:#fff;border-radius:8px;padding:40px 38px 40px 40px;box-sizing:border-box;align-items:center}
+.product-features-block .compare-bl p{font:normal 400 18px/28px Gotham;margin:0;text-align:left;color:#4b5563}
+.product-features-block .compare-bl a{background:#202944;display:block;box-shadow:0 1px 3px rgba(0,0,0,.1),0 1px 2px rgba(0,0,0,.06);border-radius:34px;text-decoration:none;font-family:Gotham;font-style:normal;font-weight:400;font-size:16px;line-height:24px;color:#fff;display:flex;flex-direction:row;justify-content:center;align-items:center;width:154px;padding:16px 40px;white-space:nowrap}
+/*** index categories styles ***/
+
+.index-categories.block {margin: 0;}
+.index-categories .body {padding: 0;}
+.index-categories .image-block { width: 200px; height: 200px; }
+.index-categories .image-block img { max-width: 200px; max-height: 200px; width: auto; height: auto; }
+.index-categories .category { float: left; }
+
+/*** end index categories styles ***/
 /*start video_block_watch */
+.index-the-dish.block {margin: 0;}
+.index-the-dish .body {padding: 0;}
+.from-the-dish{box-sizing:border-box;padding:96px 40px 48px;background:60px -170px/182px no-repeat url(../images/plant-bg.png),#dff0c8}
+.from-the-dish h2{font:normal 700 36px/40px 'DIN Next LT Pro';text-align:center;letter-spacing:-.025em;color:#202944}
+.from-the-dish p{font:normal 400 20px/28px Gotham;text-align:center;color:#58595b}
+
 .video_block_watch.block {margin: 0;}
-.video_block_watch .from-the-dish {
-    box-sizing: border-box;
-    padding: 96px 40px 48px;
-    background: 60px -170px/ 182px no-repeat url(../images/plant-bg.png), #DFF0C8;
-}
 .video_block_watch .video-wrap {
     position: relative;
   padding-bottom: 41%;  
@@ -1965,23 +1860,7 @@ color: #4B5563;
     flex-basis: 50%;
     padding: 0 24px;
 }
-.video_block_watch  .from-the-dish h2{
-font-family: 'DIN Next LT Pro';
-font-style: normal;
-font-weight: 700;
-font-size: 36px;
-line-height: 40px;
-text-align: center;
-letter-spacing: -0.025em;
-color: #202944;
-}
-.video_block_watch  .from-the-dish p {
-    font-family: 'Gotham';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 28px;text-align: center;color: #58595B;
-}
+
 
 .video_block_watch .video-block-deep {
     background: #202944;color: #FFFFFF;
@@ -2429,7 +2308,9 @@ position: relative;z-index: 93;
     border: none;
     font-size: 18px;
 }
-.header-search-form-wrap .search-field {position: absolute; left: 0;}
+.header-search-form-wrap .search-field {
+position: absolute; left: 0;
+}
 .bk-header .right-bar-header {     width: max-content;  margin: 0 auto;}
 .nav-header li li {     background: white;}
 .nav-header li li li {  background: white;}
