@@ -1779,7 +1779,7 @@ font: normal 400 16px/24px Gotham;color: #0E8D63;}
 .index-categories .category { float: left; 
 height: 100%; display: flex; flex-direction: column; max-width: 198px;
 }
-.index-categories .slieder-block-wr {
+.index-categories .slider-block-wr {
     max-width: 70%;
 }
 .index-categories .category .more-details {
@@ -1818,6 +1818,14 @@ font: normal 500 18px/24px Gotham; color: #202944; text-decoration: none;
     border-radius: 0px 0px 0px 60px;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+.index-categories .img-bg-border-category {
+    position: absolute;
+    z-index: 5;
+    left: -20px;
+    top: 10px;
+
 }
 .index-categories .category-header .text-wr{
     max-width: 311px;
