@@ -1768,22 +1768,25 @@ font: normal 400 16px/24px Gotham;color: #0E8D63;}
 
 .index-categories.block {margin: 0; overflow: hidden;}
 .index-categories .body {padding: 0;}
-.index-categories .image-block { width: 200px; height: 200px; }
+.index-categories .image-block { width: 200px; height: 200px; margin-bottom: 24px;}
 .index-categories .image-block img { max-width: 200px; max-height: 200px; width: auto; height: auto; border-radius: 8px; padding: 0;}
-.index-categories .body > div {display: flex; padding: 0 0 70px 0;
+.index-categories .body > div {display: flex; padding: 0 0 43px 0;
     background: center/cover no-repeat url(../images/bg-news-article.jpg);
 }
 .index-categories .categories {
-    padding:   20px 0;
+    padding: 40px 0 20px;
 }
 .index-categories .category { float: left; 
 height: 100%; display: flex; flex-direction: column; max-width: 198px;
 }
 .index-categories .slider-block-wr {
-    max-width: 70%; position: relative;
+    max-width: calc(100% - 445px); position: relative;
 }
 .index-categories .category .more-details {
     display: flex; margin-top: auto;
+}
+.index-categories .category .name-block {
+    margin-bottom: 8px;
 }
 .index-categories .category .more-details a.bn-more {
     color: #202944; padding: 0;
@@ -1794,22 +1797,44 @@ height: 100%; display: flex; flex-direction: column; max-width: 198px;
 font: normal 500 18px/24px Gotham; color: #202944; text-decoration: none;
 }
 .index-categories .category .category-desc {
-    font: normal 400 14px/20px Gotham; color: #58595B;
+    font: normal 400 14px/20px Gotham; color: #58595B; 
 }
-.index-categories [data-type="slides-prev"] {
-        position: absolute; z-index: 50;
-            top: 50%;
+/* nav */
+.index-categories [data-type="slides-prev"], .index-categories [data-type="slides-next"] {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 50;
+    top: 50%; border-radius:50%;
+    background: #202944;
+    text-align: center;
+    text-decoration: none;
+    color: white; font-size: 36px; line-height: 46px;
 }
+
 .index-categories [data-type="slides-next"] {
-    position: absolute; right: 0; z-index: 50;
+    right: 0;
     top: 50%;
+}
+.index-categories [data-type="slides-next"] span, .index-categories [data-type="slides-prev"] span {
+    display: none;
+}
+.index-categories [data-type="slides-next"]:after {
+    content: "\f105";
+    font-family: 'FA';
+}
+.index-categories [data-type="slides-prev"]:after {
+    content: "\f104";
+    font-family: 'FA';
 }
 .index-categories .category-header h2{color: white; font:normal 700 36px/40px 'DIN Next LT Pro', sans-serif}
 .index-categories .category-header p {
     font: normal 400 14px/20px 'Gotham', sans-serif; color: white;
 }
 .index-categories .category-header a {
-    font: normal 400 16px/24px 'Gotham', sans-serif; color: #202944;
+    font: normal 500 16px/24px 'Gotham', sans-serif; color: #202944;
+    text-align: center; text-decoration: none; padding: 12px 20px; border-radius: 34px;
+    display: block; background: white; max-width: 110px; box-sizing: border-box;
 }
 .index-categories .category-header {
     background: #5E9732;
@@ -1830,7 +1855,8 @@ font: normal 500 18px/24px Gotham; color: #202944; text-decoration: none;
     max-width: none;
 }
 .index-categories .category-header .text-wr{
-    max-width: 311px;
+    max-width: 311px; position: relative;
+        z-index: 6;
 }
 
 /*** end index categories styles ***/
@@ -2244,7 +2270,10 @@ position: relative;z-index: 93;
 }
  .slideshow-top .body >div {
     justify-content: space-around;
- }
+}
+.index-categories .slider-block-wr {
+    max-width: calc(100% - 370px);
+}
 }
 
 @media (max-width: 1024px) {
@@ -2393,6 +2422,19 @@ li.cart.nav-right > a > i { padding: 0 4px 0 0; }
 .news-article .img-news-wrap.video-article:after {
         width: 84px;
     height: 83px
+}
+.index-categories .slider-block-wr {
+    max-width: 100%;
+}
+.index-categories .body>div {
+    flex-direction: column;
+}
+.index-categories .img-bg-border-category {
+    display: none;
+}
+.index-categories .category-header {
+    max-width: none;
+    padding: 20px ;
 }
 }
 
