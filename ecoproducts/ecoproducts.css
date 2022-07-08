@@ -1036,6 +1036,24 @@ a.chooseOptions { color:red; background-color: #ffeeee; border: 1px solid #FFA0A
 .category-subs a { font-size: 12px; text-decoration: none;  }
 .category-subs a:hover {text-decoration: underline;}
 
+/*** category info block ***/
+.dt-image.dt-desc, .dt-image.dt-tabs { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr; }
+.dt-image.dt-desc .bk-image, .dt-image.dt-tabs .bk-image { grid-column: 1/2; grid-row: 1/2; }
+.dt-image.dt-desc .bk-desc  { grid-column: 2/3; grid-row: 1/2; }
+.dt-image.dt-tabs .bk-tabs  { grid-column: 2/3; grid-row: 1/2; }
+.dt-image.dt-desc.dt-tabs { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto 1fr; }
+.dt-image.dt-desc.dt-tabs .bk-image { grid-column: 1/2; grid-row: 1/3; }
+.dt-image.dt-desc.dt-tabs .bk-desc  { grid-column: 2/3; grid-row: 1/2; }
+.dt-image.dt-desc.dt-tabs .bk-tabs  { grid-column: 2/3; grid-row: 2/3; }
+
+.bk-product-category .tabs { margin: 0; padding: 0;}
+.bk-product-category .tabs li {display: block; float: left; list-style: none; margin: 0 15px 0 5px; padding: 0;  }
+.bk-product-category .tabs li a { border: none; background: none; }
+.bk-product-category .tabs li {background: none; color: #666666; cursor: pointer; display: block; font-weight: bold; padding: 10px 0; text-decoration: none;}
+.bk-product-category .tabs li.tab-active 	{background: url(../images/ep/tab-a.gif) no-repeat 50% 100%; color: #91c850; display: block; font-weight: bold; padding: 10px 0; text-decoration: none;}
+.bk-product-category .tabs li:hover {color:#91c850;}
+
+
 /*** Categories ***/
 .groupTitle		{background: #E9E9E9; font-size: 120%; padding: 6px;}
 .feature			{border-bottom: 1px solid #E9E9E9; display: block; padding: 6px;}
@@ -1207,6 +1225,12 @@ input + .ico-help { padding-left: 5px; }
 .ico-user:before { content: "\f007"; }
 .ico-products:before { content: "\f0c9"; }
 .ico-contact:before { content: "\f232"; }
+.ico-leaf:before {content: "\f06c"; } 
+.ico-globe:before {content: "\f0ac"; } 
+.ico-line-chart:before {content: "\f201"; } 
+.ico-paper-plane:before {content: "\f1d8"; }
+.ico-tree:before {content: "\f1bb"; }
+.ico-recycle:before {content: "\f1b8"; }
 /*** end icons ***/
 
 /*** Manual list ***/
@@ -1770,17 +1794,19 @@ font: normal 400 16px/24px Gotham;color: #0E8D63;}
 .index-categories .body {padding: 0;}
 .index-categories .image-block { width: 200px; height: 200px; margin-bottom: 24px;}
 .index-categories .image-block img { max-width: 200px; max-height: 200px; width: auto; height: auto; border-radius: 8px; padding: 0;}
-.index-categories .body > div {display: flex; padding: 0 0 43px 0;
+.index-categories .categories-data {display: flex; padding: 0 0 40px 0;
     background: center/cover no-repeat url(../images/bg-news-article.jpg);
 }
 .index-categories .categories {
-    padding: 40px 40px 20px;
+    padding: 0px 50px 0px; max-height: 520px; 
 }
-.index-categories .category { float: left; 
-height: 100%; display: flex; flex-direction: column; max-width: 198px;
+
+.index-categories .category { float: left; transition: 1s opacity linear; 
+	height: 100%; display: flex; flex-direction: column; max-width: 212px; padding: 50px 6px 20px; box-sizing: border-box; 
 }
-.index-categories .slider-block-wr {
-    max-width: calc(100% - 445px); position: relative;
+.index-categories .category[data-inactive] { opacity: 0.4; }
+.index-categories .categories-slider {
+    width: calc(100% - 400px); position: relative;
 }
 .index-categories .category .more-details {
     display: flex; margin-top: auto;
@@ -1800,28 +1826,32 @@ font: normal 500 18px/24px Gotham; color: #202944; text-decoration: none;
     font: normal 400 14px/20px Gotham; color: #58595B; 
 }
 /* nav */
-.index-categories [data-type=slides-next],.index-categories [data-type=slides-prev]{ cursor: pointer; width:50px;height:50px;position:absolute;z-index:50;top:50%;border-radius:50%;background:#202944;text-align:center;text-decoration:none;color:#fff;font-size:36px;line-height:46px}
+.index-categories [data-type=slides-next],.index-categories [data-type=slides-prev] { 
+	cursor: pointer; width:50px;height:50px;position:absolute;z-index:50;top:50%;border-radius:50%;background:#202944;text-align:center;text-decoration:none;color:#fff;font-size:36px;line-height:46px;
+	transition: 1s opacity linear;
+}
+.index-categories [data-type=slides-next]:hover,.index-categories [data-type=slides-prev]:hover {
+	color: #7af;
+} 
 
-.index-categories [data-type=slides-next]{right:0;top:50%}
-
+.index-categories [data-type=slides-next]{right:15px;top:50%}
 .index-categories [data-type=slides-next] span:after{content:"\f105";font-family:FA}
 .index-categories [data-type=slides-prev] span:after{content:"\f104";font-family:FA}
-
 .index-categories [data-type=slides-prev] span{margin-right:5px}
 .index-categories [data-type=slides-next] span{margin-left:5px}
-
-.index-categories .category-header h2{color: white; font:normal 700 36px/40px 'DIN Next LT Pro', sans-serif}
-.index-categories .category-header p {
+[data-type=slides-prev][data-inactive], [data-type=slides-next][data-inactive] { opacity: 0.1; cursor: default; }
+.index-categories .hot-block h2{color: white; font:normal 700 36px/40px 'DIN Next LT Pro', sans-serif}
+.index-categories .hot-block p {
     font: normal 400 14px/20px 'Gotham', sans-serif; color: white;
 }
-.index-categories .category-header a {
+.index-categories .hot-block a {
     font: normal 500 16px/24px 'Gotham', sans-serif; color: #202944;
     text-align: center; text-decoration: none; padding: 12px 20px; border-radius: 34px;
     display: block; background: white; max-width: 110px; box-sizing: border-box;
 }
-.index-categories .category-header {
+.index-categories .hot-block {
     background: #5E9732;
-    width: 100%;
+    width: 400px;
     display: flex;
     border-radius: 0px 0px 0px 60px;
     justify-content: center;
@@ -1837,8 +1867,8 @@ font: normal 500 18px/24px Gotham; color: #202944; text-decoration: none;
     height: 110%;
     max-width: none;
 }
-.index-categories .category-header .text-wr{
-    max-width: 311px; position: relative;
+.index-categories .hot-block .hot-text {
+    width: 311px; position: relative;
         z-index: 6;
 }
 
@@ -2254,9 +2284,6 @@ position: relative;z-index: 93;
  .slideshow-top .body >div {
     justify-content: space-around;
 }
-.index-categories .slider-block-wr {
-    max-width: calc(100% - 370px);
-}
 }
 
 @media (max-width: 1024px) {
@@ -2406,17 +2433,17 @@ li.cart.nav-right > a > i { padding: 0 4px 0 0; }
         width: 84px;
     height: 83px
 }
-.index-categories .slider-block-wr {
-    max-width: 100%;
+.index-categories .categories-slider {
+    width: 100%;
 }
-.index-categories .body>div {
+.index-categories .categories-data {
     flex-direction: column-reverse;
 }
 .index-categories .img-bg-border-category {
     display: none;
 }
-.index-categories .category-header {
-    max-width: none;
+.index-categories .hot-block {
+    width: auto;
     padding: 20px ;
 }
 }
@@ -2577,3 +2604,18 @@ i.spin:before { content: "\f110"; }
 .preview-list .preview-image.preview-selected { outline: 3px solid #FF8A13;  }
 /* end preview images styles */
 
+/*
+			<div class="catImg"><img src="{src}" {width} {height} border="0" alt="{alt}" /></div><!-- end image_large_block -->
+			<div class="catDescription">
+				{full_description}
+				<div id="tabs" class="tabs"><!-- BEGIN tabs_rows -->
+					<ul id="{row_id}" class="CategoryTabs"><!-- BEGIN tabs -->
+						<li id="{tab_name}" class="{tab_class}"onClick="changeCatTab('{tab_name}'); return false;">{tab_title}</li><!-- END tabs --> 
+						<li class="EndTab">&nbsp;</li>                    	
+					</ul><!-- END tabs_rows -->
+				</div><!-- BEGIN tabs_text -->
+				<div id="data_{tab_name}" class="tabContent" style="{tab_name_style}">
+					 {tab_text}
+			 	</div><!-- END tabs_text -->
+			</div>
+*/
