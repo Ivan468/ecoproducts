@@ -2276,7 +2276,7 @@ position: relative;z-index: 93;
  padding: 46px 24px;
 }
 .desc-stripe.title-green .desc-head {
-    display: flex; color: #0E8D63; gap: 16px;
+    display: flex; color: #0E8D63; gap: 16px; margin-bottom: 8px;
 }
 .desc-stripe.title-green .desc-head .title-text{
     font-family: 'DIN Next LT Pro';
@@ -2299,7 +2299,7 @@ position: relative;z-index: 93;
 }
 .desc-stripe.title-green  .desc-text{
     max-width: 753px; 
-    margin-left: 26px;
+    margin-left: 26px;flex-basis: 49%;
 }
 .desc-stripe.title-green .list-desc{
     display: flex; margin-bottom: 24px;
@@ -2309,16 +2309,25 @@ position: relative;z-index: 93;
         font-weight: 700;
         font-size: 36px;
         line-height: 32px;
-
+        margin-bottom: 20px;
         color: #202944;
+}
+.desc-stripe.title-green .list-desc .list-icon{
+    font-style: 20px;
 }
 .desc-stripe.title-green .item-desc{
     font-family: 'Gotham';
         font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
+        font-weight: 400; display: list-item;
+        font-size: 16px; margin-left: 20px;
+        line-height: 24px; margin-bottom: 20px;
     color: #58595B;
+}
+.desc-stripe.title-green .desc-icons {
+    justify-content: space-around; padding: 24px 10px 20px;
+}
+.desc-stripe.title-green .desc-icons .desc-icon{
+    flex-basis: 88px;
 }
 /* END PRODUCT PAGE */
 @media (max-width: 1260px) {
