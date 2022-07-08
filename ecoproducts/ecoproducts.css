@@ -1774,7 +1774,7 @@ font: normal 400 16px/24px Gotham;color: #0E8D63;}
     background: center/cover no-repeat url(../images/bg-news-article.jpg);
 }
 .index-categories .categories {
-    padding: 40px 0 20px;
+    padding: 40px 40px 20px;
 }
 .index-categories .category { float: left; 
 height: 100%; display: flex; flex-direction: column; max-width: 198px;
@@ -1800,33 +1800,16 @@ font: normal 500 18px/24px Gotham; color: #202944; text-decoration: none;
     font: normal 400 14px/20px Gotham; color: #58595B; 
 }
 /* nav */
-.index-categories [data-type="slides-prev"], .index-categories [data-type="slides-next"] {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    z-index: 50;
-    top: 50%; border-radius:50%;
-    background: #202944;
-    text-align: center;
-    text-decoration: none;
-    color: white; font-size: 36px; line-height: 46px;
-}
+.index-categories [data-type=slides-next],.index-categories [data-type=slides-prev]{ cursor: pointer; width:50px;height:50px;position:absolute;z-index:50;top:50%;border-radius:50%;background:#202944;text-align:center;text-decoration:none;color:#fff;font-size:36px;line-height:46px}
 
-.index-categories [data-type="slides-next"] {
-    right: 0;
-    top: 50%;
-}
-.index-categories [data-type="slides-next"] span, .index-categories [data-type="slides-prev"] span {
-    display: none;
-}
-.index-categories [data-type="slides-next"]:after {
-    content: "\f105";
-    font-family: 'FA';
-}
-.index-categories [data-type="slides-prev"]:after {
-    content: "\f104";
-    font-family: 'FA';
-}
+.index-categories [data-type=slides-next]{right:0;top:50%}
+
+.index-categories [data-type=slides-next] span:after{content:"\f105";font-family:FA}
+.index-categories [data-type=slides-prev] span:after{content:"\f104";font-family:FA}
+
+.index-categories [data-type=slides-prev] span{margin-right:5px}
+.index-categories [data-type=slides-next] span{margin-left:5px}
+
 .index-categories .category-header h2{color: white; font:normal 700 36px/40px 'DIN Next LT Pro', sans-serif}
 .index-categories .category-header p {
     font: normal 400 14px/20px 'Gotham', sans-serif; color: white;
@@ -1849,7 +1832,7 @@ font: normal 500 18px/24px Gotham; color: #202944; text-decoration: none;
     position: absolute;
     z-index: 5;
     left: -10px;
-    top: -34px;
+    top: -40px;
     width: 100%;
     height: 110%;
     max-width: none;
@@ -2427,7 +2410,7 @@ li.cart.nav-right > a > i { padding: 0 4px 0 0; }
     max-width: 100%;
 }
 .index-categories .body>div {
-    flex-direction: column;
+    flex-direction: column-reverse;
 }
 .index-categories .img-bg-border-category {
     display: none;
