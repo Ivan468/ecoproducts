@@ -2234,6 +2234,93 @@ position: relative;z-index: 93;
     flex-wrap: wrap;
 }
 /* END Footer */
+/* PRODUKT PAGE */
+.bk-category-descs.area, .bk-header.area {margin-top: 0;}
+.desc-mountains {
+    color: #FFFFFF; box-sizing: border-box;
+    padding: 95px 75px 95px 75px;
+    background: center/cover no-repeat url(../images/feature-bg.jpg);
+}
+.desc-mountains .desc-body {
+    display: flex; flex-direction: row-reverse;
+    gap: 96px; flex-wrap: wrap-reverse; justify-content: space-around;
+}
+.desc-mountains .desc-visual, .desc-text{
+    flex-basis: 46%;
+}
+.desc-mountains .desc-visual {
+    text-align: end;
+}
+.desc-mountains .desc-head {
+    font-family: 'DIN Next LT Pro';
+    font-style: normal;
+    font-weight: 750;
+    font-size: 48px; margin-bottom: 20px;
+    line-height: 40px;
+    text-transform: uppercase;
+    
+}
+.desc-mountains .desc-html {
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+}
+.desc-mountains iframe {
+    width: 448px;
+    height: 300px;
+}
+
+.desc-stripe.title-green {
+ padding: 46px 24px;
+}
+.desc-stripe.title-green .desc-head {
+    display: flex; color: #0E8D63; gap: 16px;
+}
+.desc-stripe.title-green .desc-head .title-text{
+    font-family: 'DIN Next LT Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 40px;    
+        letter-spacing: -0.025em;
+}
+.desc-stripe.title-green .desc-head .title-text .title-note {
+    font-family: 'Gotham';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 4px;
+}
+.desc-stripe.title-green .desc-body, .desc-stripe.title-green .desc-icons{
+    display: flex;
+}
+.desc-stripe.title-green  .desc-text{
+    max-width: 753px; 
+    margin-left: 26px;
+}
+.desc-stripe.title-green .list-desc{
+    display: flex; margin-bottom: 24px;
+        gap: 8px;
+        font-family: 'DIN Next LT Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 32px;
+
+        color: #202944;
+}
+.desc-stripe.title-green .item-desc{
+    font-family: 'Gotham';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    color: #58595B;
+}
+/* END PRODUCT PAGE */
 @media (max-width: 1260px) {
 .fm-header, .layout, .fm-footer { width: 1000px; } 
 .fm-header  {}
