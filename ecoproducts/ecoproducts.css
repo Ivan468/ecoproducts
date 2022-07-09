@@ -1604,8 +1604,12 @@ div.orderPopup {background: #FFFFFF; border: 1px solid #D5D4E9; padding: 2px; di
 [data-type="slide-prev"]:hover, [data-type="slide-next"]:hover { color: #fff; background: rgba(0, 0, 0, 0.1); }
 [data-type="slide-prev"] { left: 0; }
 [data-type="slide-next"] { right: 0; }
-[data-type="slide-prev"]:before { content: "\f053"; "\f0a5"; }
-[data-type="slide-next"]:before { content: "\f054"; "\f0a4"; }
+[data-type="slide-prev"]:before { content: "\f053"; 
+    /* "\f0a5"; */
+ }
+[data-type="slide-next"]:before { content: "\f054"; 
+    /* "\f0a4";  */
+}
 /*** end of slideshow styles ***/
 
 .imageSelect { border: 1px solid #ac7f1a; margin: 2px 2px 5px 5px; }
@@ -2239,37 +2243,47 @@ margin-bottom: 16px;
 }
 /* END Footer */
 /* PRODUKT PAGE */
-.bk-category-descs.area, .bk-header.area {margin-top: 0;}
+.bk-category-descs.area,
+.bk-header.area {
+    margin-top: 0;}
+
 .desc-mountains {
     box-sizing: border-box;
     padding: 95px 75px 95px 75px;
     background: center/cover no-repeat url(../images/feature-bg-crop.jpg);
 }
-.desc-mountains.desc-white {
-color: #FFFFFF;
-}
 .desc-mountains .youtube-video {
     width: 100%;
 }
+
 .desc-mountains .desc-body {
-    display: flex; flex-direction: row-reverse;
-    gap: 96px; flex-wrap: wrap-reverse; justify-content: space-around;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 96px;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
 }
-.desc-mountains .desc-visual, .desc-text{
+
+.desc-mountains .desc-visual,
+.desc-text {
     flex-basis: 46%;
 }
+
 .desc-mountains .desc-visual {
     text-align: end;
 }
+
 .desc-mountains .desc-head {
     font-family: 'DIN Next LT Pro';
     font-style: normal;
     font-weight: 750;
-    font-size: 48px; margin-bottom: 20px;
+    font-size: 48px;
+    margin-bottom: 20px;
     line-height: 40px;
     text-transform: uppercase;
-    
+
 }
+
 .desc-mountains .desc-html {
     font-family: 'Gotham';
     font-style: normal;
@@ -2277,118 +2291,134 @@ color: #FFFFFF;
     font-size: 18px;
     line-height: 24px;
 }
+
 .desc-mountains iframe {
     width: 448px;
-    height: 300px; border-radius: 8px;
+    height: 300px;
+    border-radius: 8px;
 }
-.desc-mountains .desc-head .desc-title{
-font-weight: 750;
+
+.desc-mountains .desc-head .desc-title {
+    font-weight: 750;
     font-size: 48px;
 }
 
-.desc-mountains.desc-white .desc-head {
-color: white;
+.desc-white {
+    color: white;
 }
 .desc-mountains .desc-text {
-flex-basis: 43%;
+    flex-basis: 43%;
 }
- .desc-stripe.title-green, .desc-stripe.title-blue {
- padding: 46px 24px 5px;
+
+.desc-stripe.title-green,
+.desc-stripe.title-blue {
+    padding: 46px 24px 5px;
 }
- .desc-stripe.title-green .desc-image img,
- .desc-stripe.title-blue .desc-image img {
+.desc-stripe.title-green .desc-image img,
+.desc-stripe.title-blue .desc-image img {
     border-radius: 8px;
 }
- .desc-head {
-    display: flex; color: #0E8D63; gap: 16px; margin-bottom: 8px;
+.desc-head {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 8px;
 }
-.desc-stripe.title-blue .desc-head{
-color: #3C64B1;
+
+.title-green {
+    color: #0E8D63;
 }
- .desc-head .title-text{
+
+.title-blue {
+    color: #3C64B1;
+}
+
+.desc-head .title-text {
     font-family: 'DIN Next LT Pro';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 40px;    
-        letter-spacing: -0.025em;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: -0.025em;
 }
 .desc-image {
     max-width: 531px;
 }
- .desc-head .title-text .title-note {
+.desc-head .title-text .title-note {
     font-family: 'Gotham';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        margin-top: 4px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 4px;
 }
- .desc-body,
- .desc-icons {
-     display: flex;
- }
+.desc-body,
+.desc-icons {
+    display: flex;
+}
 
- .desc-text {
-     max-width: 753px;
-     margin-left: 26px;
-     flex-basis: 49%;
- }
+.desc-text {
+    max-width: 753px;
+    margin-left: 26px;
+    flex-basis: 49%;
+}
 
- .list-desc {
-     display: flex;
-     gap: 8px;
-     font-family: 'DIN Next LT Pro';
-     font-style: normal;
-     font-weight: 700;
-     font-size: 36px;
-     line-height: 32px;
-     margin-bottom: 20px;
-     color: #202944;
- }
+.list-desc {
+    display: flex;
+    gap: 8px;
+    font-family: 'DIN Next LT Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 32px;
+    margin-bottom: 20px;
+    color: #202944;
+}
 
- .list-desc .list-icon {
-     font-size: 20px;
- }
+.list-desc .list-icon {
+    font-size: 20px;
+}
 
- .item-desc {
-     font-family: 'Gotham';
-     font-style: normal;
-     font-weight: 400;
-     display: list-item;
-     font-size: 16px;
-     margin-left: 20px;
-     line-height: 24px;
-     margin-bottom: 20px;
-     color: #58595B;
- }
+.item-desc {
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 400;
+    display: list-item;
+    font-size: 16px;
+    margin-left: 20px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    color: #58595B;
+}
+
 .desc-icons {
     padding: 24px 10px 20px;
     max-width: 513px;
     gap: 16px;
 }
 
- .icon-desc {
-     font-family: 'Gotham';
-     font-style: normal;
-     font-weight: 400;
-     height: 31px;
-     font-size: 12px;
-     line-height: 16px;
-     justify-content: center;
-     display: flex;
-     align-items: center;
-     text-align: center;
-     color: #333333;
- }
+.icon-desc {
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 400;
+    height: 31px;
+    font-size: 12px;
+    line-height: 16px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #333333;
+}
 
- .desc-icons .desc-icon {
-     flex-basis: 88px;
-     text-align: center;
- }
- .pg-products-list .nav-footer{
-    width: 100%; text-align: initial;
- }
+.desc-icons .desc-icon {
+    flex-basis: 88px;
+    text-align: center;
+}
+
+.pg-products-list .nav-footer {
+    width: 100%;
+    text-align: initial;
+}
 /* END PRODUCT PAGE */
 @media (max-width: 1260px) {
 .fm-header, .layout, .fm-footer { width: 1000px; } 
