@@ -1857,7 +1857,7 @@ font: normal 500 18px/24px Gotham; color: #202944; text-decoration: none;
     display: block; background: white; max-width: 110px; box-sizing: border-box;
 }
 .index-categories .hot-block {
-    background: #5E9732;
+    background: 0 0/ 100% no-repeat url(../images/border-category-new.png);
     width: 400px;
     display: flex;
     border-radius: 0px 0px 0px 60px;
