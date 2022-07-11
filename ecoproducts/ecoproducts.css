@@ -2250,86 +2250,20 @@ margin-bottom: 16px;
 .desc-stripe { background-color: #F9FAFB; }
 .desc-mountains{box-sizing:border-box;padding:95px 75px 95px 75px;background:center/cover no-repeat url(../images/feature-bg-crop.jpg)}.desc-mountains .youtube-video{width:100%}.desc-mountains .desc-body{display:flex;flex-direction:row-reverse;gap:96px;flex-wrap:wrap-reverse;justify-content:space-around}.desc-mountains .desc-visual,.desc-text{flex-basis:46%}.desc-mountains .desc-visual{text-align:end}.desc-mountains .desc-head{font-family:'DIN Next LT Pro';font-style:normal;font-weight:750;font-size:48px;margin-bottom:20px;line-height:40px;text-transform:uppercase}.desc-mountains .desc-html{font-family:Gotham;font-style:normal;font-weight:500;font-size:18px;line-height:24px}.desc-mountains iframe{width:448px;height:300px;border-radius:8px}.desc-mountains .desc-head .desc-title{font-weight:750;font-size:48px}.desc-white{color:#fff}.desc-mountains .desc-text{flex-basis:43%}.desc-stripe.title-blue,.desc-stripe.title-green{padding:46px 24px 5px}.desc-stripe.title-blue .desc-image img,.desc-stripe.title-green .desc-image img{border-radius:8px}.desc-head{display:flex;gap:16px;margin-bottom:8px}.title-green{color:#0e8d63}.title-blue{color:#3c64b1}.desc-head .title-text{font-family:'DIN Next LT Pro';font-style:normal;font-weight:700;font-size:36px;line-height:40px;letter-spacing:-.025em}.desc-image{max-width:531px}.desc-head .title-text .title-note{font-family:Gotham;font-style:normal;font-weight:400;font-size:16px;line-height:24px;margin-top:4px}.desc-body,.desc-icons{display:flex}.desc-text{max-width:753px;margin-left:26px;flex-basis:49%}.list-desc{display:flex;gap:8px;font-family:'DIN Next LT Pro';font-style:normal;font-weight:700;font-size:36px;line-height:32px;margin-bottom:20px;color:#202944}.list-desc .list-icon{font-size:20px}.item-desc{font-family:Gotham;font-style:normal;font-weight:400;display:list-item;font-size:16px;margin-left:20px;line-height:24px;margin-bottom:20px;color:#58595b}.desc-icons{padding:24px 10px 20px;max-width:513px;gap:16px}.icon-desc{font-family:Gotham;font-style:normal;font-weight:400;height:31px;font-size:12px;line-height:16px;justify-content:center;display:flex;align-items:center;text-align:center;color:#333}.desc-icons .desc-icon{flex-basis:88px;text-align:center}.pg-products-list .nav-footer{width:100%;text-align:initial}
 
-.desc-mountains .btn {
-    display: flex; box-sizing:border-box;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 17px 41px; 
-    transition: all 0.5s;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .1), 0 1px 2px rgba(0, 0, 0, .06);
-    border-radius: 6px;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 28px;
-    text-decoration: none;
-    transition: all .35s;
-}
-
-.desc-mountains .btn:hover {
-    filter: invert(0.1);
-}
-
-.desc-mountains .btn-wrap {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    align-items: center; margin-top: 32px;
-}
-
-.desc-mountains a.prymary-btn {
-    color: #fff;
-    background: #4f46e5;
-    width: 185px;
-}
-
-.desc-mountains a.second-btn {
-    background: #fff; width: 171px;
-    color: #4f46e5; width: 173px;
-}
-
+.desc-mountains .btn{display:flex;box-sizing:border-box;flex-direction:row;justify-content:center;align-items:center;padding:17px 41px;transition:all .5s;box-shadow:0 1px 3px rgba(0,0,0,.1),0 1px 2px rgba(0,0,0,.06);border-radius:6px;font-family:Inter;font-style:normal;font-weight:500;font-size:18px;line-height:28px;text-decoration:none;transition:all .35s}
+.desc-mountains .btn:hover{filter:invert(.1)}
+.desc-mountains .btn-wrap{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:32px}
+.desc-mountains a.prymary-btn{color:#fff;background:#4f46e5;width:185px}
+.desc-mountains a.second-btn{background:#fff;width:171px;color:#4f46e5;width:173px}
 .desc-categories .categories-list { position: relative; }
 .desc-categories { display: flex; background:#F9FAFB}
-.desc-categories .categories-special { width: 320px; background: #0E8D63; padding: 141px 49px 50px 41px; border-radius: 0px 0px 60px 0px;}
+.desc-categories .categories-special { box-sizing:border-box; width: 320px; background: 0 0/ 100% no-repeat url(../images/border-categories-special.png); padding: 141px 49px 50px 41px; border-radius: 0px 0px 60px 0px;}
+.desc-categories.special-blue .categories-special{background:0 0/100% no-repeat url(../images/border-categories-special-blue.png)}
 .desc-categories .categories-list { width: calc(100% - 320px); background: #F9FAFB; }
 .desc-categories .categories { padding: 43px 50px; }
-.desc-categories .category-name {
-    font-family: 'Gotham'; display: block; max-width: 148px;
-    font-style: normal;
-    font-weight: 700; text-decoration: none;
-    font-size: 20px; margin-top: 24px;
-    line-height: 24px;
-    color: #202944;
-}
-
-.categories-special .categories-desc {
-    font-family: 'DIN Next LT Pro';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 40px;
-    color: #FFFFFF;
-}
-.categories-special a.categories-button {
-    display: block; margin-top: 8px;
-   
-    text-align: center;
-    
-    width: 110px;
-    height: 48px;
-    box-sizing: border-box;
-    padding: 12px 20px;
-    background: #FFFFFF;
-    border-radius: 34px; text-decoration: none;
-    font-family: 'Gotham';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        color: #202944;
-}
+.desc-categories .category-name{font-family:Gotham;display:block;max-width:148px;font-style:normal;font-weight:700;text-decoration:none;font-size:20px;margin-top:24px;line-height:24px;color:#202944}
+.categories-special .categories-desc{font-family:'DIN Next LT Pro';font-style:normal;font-weight:700;font-size:36px;line-height:40px;color:#fff}
+.categories-special a.categories-button{display:block;margin-top:8px;text-align:center;width:110px;height:48px;box-sizing:border-box;padding:12px 20px;background:#fff;border-radius:34px;text-decoration:none;font-family:Gotham;font-style:normal;font-weight:400;font-size:16px;line-height:24px;color:#202944}
 
 .desc-categories .categories-list .category { padding: 0 15px; width: 150px; }
 .desc-categories .categories-list .image-block { height: 150px; }
